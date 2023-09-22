@@ -427,7 +427,8 @@ class MirrorLeechListener:
                 msg += f'<b>• Files: </b>{files}\n'
             if link or rclonePath and config_dict['RCLONE_SERVE_URL']:
                 if link:
-                    buttons.ubutton('Cloud link', link)
+                    if not config_dict['DISABLE_DRIVE_LINK']:
+                        buttons.ubutton('Cloud link', link)
                 else:
                     msg += f'<b>• Path: </b><code>{rclonePath}</code>\n'
                 if rclonePath and (RCLONE_SERVE_URL := config_dict['RCLONE_SERVE_URL']):

@@ -238,6 +238,9 @@ async def load_config():
 
     SHOW_MEDIAINFO = environ.get('SHOW_MEDIAINFO', '')
     SHOW_MEDIAINFO = SHOW_MEDIAINFO.lower() == 'true'
+
+    DISABLE_DRIVE_LINK = environ.get('DISABLE_DRIVE_LINK', '')
+    DISABLE_DRIVE_LINK = DISABLE_DRIVE_LINK.lower() == 'true'
     
     EQUAL_SPLITS = environ.get('EQUAL_SPLITS', '')
     EQUAL_SPLITS = EQUAL_SPLITS.lower() == 'true'
@@ -419,6 +422,7 @@ async def load_config():
                         'SEARCH_LIMIT': SEARCH_LIMIT,
                         'SET_COMMANDS': SET_COMMANDS,
                         'SHOW_MEDIAINFO': SHOW_MEDIAINFO,
+                        'DISABLE_DRIVE_LINK': DISABLE_DRIVE_LINK,
                         'STOP_DUPLICATE': STOP_DUPLICATE,
                         'STREAMWISH_API': STREAMWISH_API,
                         'SUDO_USERS': SUDO_USERS,
