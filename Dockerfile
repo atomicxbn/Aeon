@@ -1,4 +1,4 @@
-FROM atomicbxb/aeonhkninja:latest
+FROM 5hojib/aeon:latest
 WORKDIR /usr/src/app
 COPY . .
 EXPOSE 80 443
