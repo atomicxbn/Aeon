@@ -141,6 +141,14 @@ async def load_config():
     if len(FILELION_API) == 0:
         FILELION_API = ''
 
+    LEECH_FILENAME_PREFIX = environ.get('LEECH_FILENAME_PREFIX', '')
+    if len(LEECH_FILENAME_PREFIX) == 0:
+        LEECH_FILENAME_PREFIX = ''
+
+    MIRROR_FILENAME_PREFIX = environ.get('MIRROR_FILENAME_PREFIX', '')
+    if len(MIRROR_FILENAME_PREFIX) == 0:
+        MIRROR_FILENAME_PREFIX = ''
+
     LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '')
     LEECH_LOG_ID = '' if len(LEECH_LOG_ID) == 0 else int(LEECH_LOG_ID)
     
@@ -392,6 +400,8 @@ async def load_config():
                         'PLAYLIST_LIMIT': PLAYLIST_LIMIT,
                         'MIRROR_LOG_ID': MIRROR_LOG_ID,
                         'LEECH_DUMP_ID': LEECH_DUMP_ID,
+                        'LEECH_FILENAME_PREFIX': LEECH_FILENAME_PREFIX,
+                        'MIRROR_FILENAME_PREFIX': MIRROR_FILENAME_PREFIX,
                         'IMAGES': IMAGES,
                         'IMG_SEARCH': IMG_SEARCH,
                         'IMG_PAGE': IMG_PAGE,
